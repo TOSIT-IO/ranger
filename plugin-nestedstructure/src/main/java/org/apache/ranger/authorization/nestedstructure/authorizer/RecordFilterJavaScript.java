@@ -20,13 +20,16 @@
 
 package org.apache.ranger.authorization.nestedstructure.authorizer;
 
-import jdk.nashorn.api.scripting.ClassFilter;
-import jdk.nashorn.api.scripting.NashornScriptEngineFactory;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import javax.script.Bindings;
+import javax.script.ScriptContext;
 import javax.script.ScriptEngine;
+import javax.script.ScriptEngineManager;
+
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  * Executes an injected javascript command to determine if the user has access to the selected record
@@ -52,12 +55,8 @@ public class RecordFilterJavaScript {
      * Helps keep javascript clean of injections.  It also contains other checks to ensure that injected
      * javascript is reasonably safe.
      */
-    static class SecurityFilter implements ClassFilter {
-        @Override
-        public boolean exposeToScripts(String s) {
-            return false;
-        }
 
+    static class SecurityFilter {
         /**
          *
           * @param filterExpr the javascript to check if it contains potentially harmful commands
@@ -72,39 +71,6 @@ public class RecordFilterJavaScript {
 
 
     public static boolean filterRow(String user, String filterExpr, String jsonString) {
-        SecurityFilter securityFilter = new SecurityFilter();
-
-        if (securityFilter.containsMalware(filterExpr)) {
-            throw new MaskingException("cannot process filter expression due to security concern \"this.engine\": " + filterExpr);
-        }
-
-        NashornScriptEngineFactory factory = new NashornScriptEngineFactory();
-        ScriptEngine               engine  = factory.getScriptEngine(securityFilter);
-
-        if (logger.isDebugEnabled()) {
-            logger.debug("filterExpr: " + filterExpr);
-        }
-
-        // convert the given JSON string to JavaScript object, which the filterExpr expects, and then exec the filterExpr
-        String script = " jsonAttr = JSON.parse(jsonString); " + NASHORN_POLYFILL_ARRAY_PROTOTYPE_INCLUDES + " " + filterExpr;
-
-        try {
-            Bindings bindings = engine.createBindings();
-
-            bindings.put("jsonString", jsonString);
-            bindings.put("user", user);
-
-            boolean hasAccess = (boolean) engine.eval(script, bindings);
-
-            if (logger.isDebugEnabled()) {
-                logger.debug("row filter access=" + hasAccess);
-            }
-
-            return hasAccess;
-        } catch (Exception e) {
-            throw new MaskingException("unable to properly evaluate filter expression: " + filterExpr, e);
-        }
+        return false;
     }
 }
-
- 
