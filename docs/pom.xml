@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <!--
  Licensed to the Apache Software Foundation (ASF) under one or more
  contributor license agreements.  See the NOTICE file distributed with
@@ -6,29 +6,34 @@
  The ASF licenses this file to You under the Apache License, Version 2.0
  (the "License"); you may not use this file except in compliance with
  the License.  You may obtain a copy of the License at
- 
+
  http://www.apache.org/licenses/LICENSE-2.0
- 
+
  Unless required by applicable law or agreed to in writing, software
  distributed under the License is distributed on an "AS IS" BASIS,
  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
  See the License for the specific language governing permissions and
  limitations under the License.
  -->
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+<project
+    xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd"
+>
     <properties>
         <project.build.sourceEncoding>ISO-8859-1</project.build.sourceEncoding>
-        <project.reporting.outputEncoding>ISO-8859-1</project.reporting.outputEncoding>
+        <project.reporting.outputEncoding
+        >ISO-8859-1</project.reporting.outputEncoding>
     </properties>
     <name>Apache Ranger</name>
     <description>
         Apache Ranger is a framework to enable, monitor and manage comprehensive data security across the Hadoop platform. Apache Ranger currently provides a centralized security adminstration, fine grain access control and detailed auditing for user access within Apache Hadoop, Apache Hive, Apache HBase and other Apache components
-        
+
     </description>
     <url>http://ranger.apache.org/</url>
     <modelVersion>4.0.0</modelVersion>
     <groupId>org.apache.ranger</groupId>
-    <version>2.6.0-1.0</version>
+    <version>2.6.0-1.1</version>
     <artifactId>ranger</artifactId>
     <packaging>pom</packaging>
     <licenses>
@@ -39,8 +44,10 @@
         </license>
     </licenses>
     <scm>
-        <connection>scm:svn:https://svn.apache.org/repos/asf/ranger/site/trunk</connection>
-        <developerConnection>scm:svn:https://svn.apache.org/repos/asf/ranger/site/trunk</developerConnection>
+        <connection
+        >scm:svn:https://svn.apache.org/repos/asf/ranger/site/trunk</connection>
+        <developerConnection
+        >scm:svn:https://svn.apache.org/repos/asf/ranger/site/trunk</developerConnection>
         <tag>HEAD</tag>
         <url>http://svn.apache.org/repos/asf/ranger/site/trunk</url>
     </scm>
@@ -56,7 +63,8 @@
             <unsubscribe>mailto:user-unsubscribe@ranger.apache.org
             </unsubscribe>
             <post>mailto:user@ranger.apache.org</post>
-            <archive>http://mail-archives.apache.org/mod_mbox/ranger-user/</archive>
+            <archive
+            >http://mail-archives.apache.org/mod_mbox/ranger-user/</archive>
         </mailingList>
         <mailingList>
             <name>Development list</name>
@@ -65,7 +73,8 @@
             <unsubscribe>mailto:dev-unsubscribe@ranger.apache.org
             </unsubscribe>
             <post>mailto:dev@ranger.apache.org</post>
-            <archive>http://mail-archives.apache.org/mod_mbox/ranger-dev/</archive>
+            <archive
+            >http://mail-archives.apache.org/mod_mbox/ranger-dev/</archive>
         </mailingList>
         <mailingList>
             <name>Commit list</name>
@@ -74,7 +83,8 @@
             <unsubscribe>mailto:commits-unsubscribe@ranger.apache.org
             </unsubscribe>
             <post>mailto:commits@ranger.apache.org</post>
-            <archive>http://mail-archives.apache.org/mod_mbox/ranger-commits/</archive>
+            <archive
+            >http://mail-archives.apache.org/mod_mbox/ranger-commits/</archive>
         </mailingList>
     </mailingLists>
     <developers>
@@ -529,23 +539,23 @@
     <contributors>
         <contributor>
             <name>Aakash Nand</name>
-            <organization></organization>
+            <organization />
         </contributor>
         <contributor>
             <name>Alejandro Fernandez</name>
-            <organization></organization>
+            <organization />
         </contributor>
         <contributor>
             <name>Alexa Yuqin D</name>
-            <organization></organization>
+            <organization />
         </contributor>
         <contributor>
             <name>Alvaro Queiroz</name>
-            <organization></organization>
+            <organization />
         </contributor>
         <contributor>
             <name>Andor Molnar</name>
-            <organization></organization>
+            <organization />
         </contributor>
         <contributor>
             <name>Andras Katona</name>
@@ -553,27 +563,27 @@
         </contributor>
         <contributor>
             <name>Andras Salamo</name>
-            <organization></organization>
+            <organization />
         </contributor>
         <contributor>
             <name>Andrew Charneski</name>
-            <organization></organization>
+            <organization />
         </contributor>
         <contributor>
             <name>Andrew Luo Technologies</name>
-            <organization></organization>
+            <organization />
         </contributor>
         <contributor>
             <name>Aneela Saleem</name>
-            <organization></organization>
+            <organization />
         </contributor>
         <contributor>
             <name>ankitap0302</name>
-            <organization></organization>
+            <organization />
         </contributor>
         <contributor>
             <name>Anna Shaverdian</name>
-            <organization></organization>
+            <organization />
         </contributor>
         <contributor>
             <name>Arshad Mohammad</name>
@@ -581,31 +591,31 @@
         </contributor>
         <contributor>
             <name>Asger Askov Blekinge</name>
-            <organization></organization>
+            <organization />
         </contributor>
         <contributor>
             <name>Ashish Singh</name>
-            <organization></organization>
+            <organization />
         </contributor>
         <contributor>
             <name>Attila Csoma</name>
-            <organization></organization>
+            <organization />
         </contributor>
         <contributor>
             <name>Austin Nobis</name>
-            <organization></organization>
+            <organization />
         </contributor>
         <contributor>
             <name>Barbara Eckman</name>
-            <organization></organization>
+            <organization />
         </contributor>
         <contributor>
             <name>Belugabehr</name>
-            <organization></organization>
+            <organization />
         </contributor>
         <contributor>
             <name>Bennet Daniel</name>
-            <organization></organization>
+            <organization />
         </contributor>
         <contributor>
             <name>Bolke de Bruin</name>
@@ -613,59 +623,59 @@
         </contributor>
         <contributor>
             <name>Brijesh Bhalala</name>
-            <organization></organization>
+            <organization />
         </contributor>
         <contributor>
             <name>Bryan Bende</name>
-            <organization></organization>
+            <organization />
         </contributor>
         <contributor>
             <name>caozhiqiang</name>
-            <organization></organization>
+            <organization />
         </contributor>
         <contributor>
             <name>Chia-Ping Tsai</name>
-            <organization></organization>
+            <organization />
         </contributor>
         <contributor>
             <name>csabakoncz</name>
-            <organization></organization>
+            <organization />
         </contributor>
         <contributor>
             <name>deepakrgr</name>
-            <organization></organization>
+            <organization />
         </contributor>
         <contributor>
             <name>Denes Bodo</name>
-            <organization></organization>
+            <organization />
         </contributor>
         <contributor>
             <name>Dongjoon Hyun</name>
-            <organization></organization>
+            <organization />
         </contributor>
         <contributor>
             <name>Dongying Jiao</name>
-            <organization></organization>
+            <organization />
         </contributor>
         <contributor>
             <name>Edward Zhang</name>
-            <organization></organization>
+            <organization />
         </contributor>
         <contributor>
             <name>egyedt</name>
-            <organization></organization>
+            <organization />
         </contributor>
         <contributor>
             <name>Endre Kovacs</name>
-            <organization></organization>
+            <organization />
         </contributor>
         <contributor>
             <name>Enis Soztutar</name>
-            <organization></organization>
+            <organization />
         </contributor>
         <contributor>
             <name>Fateh Singh</name>
-            <organization></organization>
+            <organization />
         </contributor>
         <contributor>
             <name>Fatima Amjad Khan</name>
@@ -673,87 +683,87 @@
         </contributor>
         <contributor>
             <name>gavin.wang</name>
-            <organization></organization>
+            <organization />
         </contributor>
         <contributor>
             <name>Grant Henke</name>
-            <organization></organization>
+            <organization />
         </contributor>
         <contributor>
             <name>Guru Thejus Arveti</name>
-            <organization></organization>
+            <organization />
         </contributor>
         <contributor>
             <name>Haihui Xu</name>
-            <organization></organization>
+            <organization />
         </contributor>
         <contributor>
             <name>Hanish Bansal</name>
-            <organization></organization>
+            <organization />
         </contributor>
         <contributor>
             <name>haohaoc</name>
-            <organization></organization>
+            <organization />
         </contributor>
         <contributor>
             <name>Himanshu Maurya</name>
-            <organization></organization>
+            <organization />
         </contributor>
         <contributor>
             <name>Jan Hentschel</name>
-            <organization></organization>
+            <organization />
         </contributor>
         <contributor>
             <name>jialiang</name>
-            <organization></organization>
+            <organization />
         </contributor>
         <contributor>
             <name>Jim Halfpenny</name>
-            <organization></organization>
+            <organization />
         </contributor>
         <contributor>
             <name>Joey</name>
-            <organization></organization>
+            <organization />
         </contributor>
         <contributor>
             <name>Josh Elser</name>
-            <organization></organization>
+            <organization />
         </contributor>
         <contributor>
             <name>Kengo Seki</name>
-            <organization></organization>
+            <organization />
         </contributor>
         <contributor>
             <name>Kent Yao</name>
-            <organization></organization>
+            <organization />
         </contributor>
         <contributor>
             <name>Kevin Risden</name>
-            <organization></organization>
+            <organization />
         </contributor>
         <contributor>
             <name>kirbyzhou</name>
-            <organization></organization>
+            <organization />
         </contributor>
         <contributor>
             <name>Koji Kawamura</name>
-            <organization></organization>
+            <organization />
         </contributor>
         <contributor>
             <name>kulkabhay</name>
-            <organization></organization>
+            <organization />
         </contributor>
         <contributor>
             <name>Lars Francke</name>
-            <organization></organization>
+            <organization />
         </contributor>
         <contributor>
             <name>Laszlo Denes Terjek</name>
-            <organization></organization>
+            <organization />
         </contributor>
         <contributor>
             <name>leslizhang</name>
-            <organization></organization>
+            <organization />
         </contributor>
         <contributor>
             <name>Mack Hendricks</name>
@@ -761,67 +771,67 @@
         </contributor>
         <contributor>
             <name>Madhavi Amirneni</name>
-            <organization></organization>
+            <organization />
         </contributor>
         <contributor>
             <name>Mahesh Bandal</name>
-            <organization></organization>
+            <organization />
         </contributor>
         <contributor>
             <name>mallikagogoi7</name>
-            <organization></organization>
+            <organization />
         </contributor>
         <contributor>
             <name>Mani Raman</name>
-            <organization></organization>
+            <organization />
         </contributor>
         <contributor>
             <name>Martin Grigoro</name>
-            <organization></organization>
+            <organization />
         </contributor>
         <contributor>
             <name>Mateen Mansoori</name>
-            <organization></organization>
+            <organization />
         </contributor>
         <contributor>
             <name>Naoki Takezoe</name>
-            <organization></organization>
+            <organization />
         </contributor>
         <contributor>
             <name>Neil Joshi</name>
-            <organization></organization>
+            <organization />
         </contributor>
         <contributor>
             <name>Nicholas Hughes</name>
-            <organization></organization>
+            <organization />
         </contributor>
         <contributor>
             <name>Nigel Jones</name>
-            <organization></organization>
+            <organization />
         </contributor>
         <contributor>
             <name>Nixon Rodrigue</name>
-            <organization></organization>
+            <organization />
         </contributor>
         <contributor>
             <name>Patrik Marton</name>
-            <organization></organization>
+            <organization />
         </contributor>
         <contributor>
             <name>Paul Otto</name>
-            <organization></organization>
+            <organization />
         </contributor>
         <contributor>
             <name>Peng Xing</name>
-            <organization></organization>
+            <organization />
         </contributor>
         <contributor>
             <name>Rakesh Gupta</name>
-            <organization></organization>
+            <organization />
         </contributor>
         <contributor>
             <name>Ramachandran</name>
-            <organization></organization>
+            <organization />
         </contributor>
         <contributor>
             <name>Rich Haase</name>
@@ -829,55 +839,55 @@
         </contributor>
         <contributor>
             <name>Ricky M</name>
-            <organization></organization>
+            <organization />
         </contributor>
         <contributor>
             <name>Rob Vesse</name>
-            <organization></organization>
+            <organization />
         </contributor>
         <contributor>
             <name>Rohit Sinha</name>
-            <organization></organization>
+            <organization />
         </contributor>
         <contributor>
             <name>rujia1019</name>
-            <organization></organization>
+            <organization />
         </contributor>
         <contributor>
             <name>Sanjar Matin</name>
-            <organization></organization>
+            <organization />
         </contributor>
         <contributor>
             <name>Shi Wang</name>
-            <organization></organization>
+            <organization />
         </contributor>
         <contributor>
             <name>Sree Vaddi</name>
-            <organization></organization>
+            <organization />
         </contributor>
         <contributor>
             <name>Starphinliu</name>
-            <organization></organization>
+            <organization />
         </contributor>
         <contributor>
             <name>Suneel Marthi</name>
-            <organization></organization>
+            <organization />
         </contributor>
         <contributor>
             <name>Symious</name>
-            <organization></organization>
+            <organization />
         </contributor>
         <contributor>
             <name>Thejas nair</name>
-            <organization></organization>
+            <organization />
         </contributor>
         <contributor>
             <name>Tomas Sokorai Sch</name>
-            <organization></organization>
+            <organization />
         </contributor>
         <contributor>
             <name>Tushar Dudhatra</name>
-            <organization></organization>
+            <organization />
         </contributor>
         <contributor>
             <name>Varun Rao</name>
@@ -885,11 +895,11 @@
         </contributor>
         <contributor>
             <name>Viktor Somogyi-Vas</name>
-            <organization></organization>
+            <organization />
         </contributor>
         <contributor>
             <name>Vipin Rathor</name>
-            <organization></organization>
+            <organization />
         </contributor>
         <contributor>
             <name>Vishal Suvagia</name>
@@ -897,39 +907,39 @@
         </contributor>
         <contributor>
             <name>Vomoshkovskyi</name>
-            <organization></organization>
+            <organization />
         </contributor>
         <contributor>
             <name>Wang Yuan</name>
-            <organization></organization>
+            <organization />
         </contributor>
         <contributor>
             <name>Xuze Yang</name>
-            <organization></organization>
+            <organization />
         </contributor>
         <contributor>
             <name>Yan Zhou</name>
-            <organization></organization>
+            <organization />
         </contributor>
         <contributor>
             <name>Yaolei</name>
-            <organization></organization>
+            <organization />
         </contributor>
         <contributor>
             <name>Yujie Li</name>
-            <organization></organization>
+            <organization />
         </contributor>
         <contributor>
             <name>yzhou2001</name>
-            <organization></organization>
+            <organization />
         </contributor>
         <contributor>
             <name>zhouyifan279</name>
-            <organization></organization>
+            <organization />
         </contributor>
         <contributor>
             <name>Zilong Zh</name>
-            <organization></organization>
+            <organization />
         </contributor>
     </contributors>
     <organization>
