@@ -20,35 +20,10 @@
 
 package org.apache.ranger.authorization.nestedstructure.authorizer;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
-import javax.script.Bindings;
-import javax.script.ScriptContext;
-import javax.script.ScriptEngine;
-import javax.script.ScriptEngineManager;
-
-import java.util.HashMap;
-import java.util.Map;
-
 /**
  * Executes an injected javascript command to determine if the user has access to the selected record
  */
 public class RecordFilterJavaScript {
-    private static final Logger logger = LoggerFactory.getLogger(RecordFilterJavaScript.class);
-
-    /**
-     * javascript primitive imports that the nashorn engine needs to function properly, e.g., with "includes"
-     */
-    private static final String NASHORN_POLYFILL_ARRAY_PROTOTYPE_INCLUDES  = "if (!Array.prototype.includes) " +
-            "{ Object.defineProperty(Array.prototype, 'includes', { value: function(valueToFind, fromIndex) " +
-            "{ if (this == null) { throw new TypeError('\"this\" is null or not defined'); } var o = Object(this); " +
-            "var len = o.length >>> 0; if (len === 0) { return false; } var n = fromIndex | 0; " +
-            "var k = Math.max(n >= 0 ? n : len - Math.abs(n), 0); " +
-            "function sameValueZero(x, y) { return x === y || (typeof x === 'number' && typeof y === 'number' " +
-            "&& isNaN(x) && isNaN(y)); } while (k < len) { if (sameValueZero(o[k], valueToFind)) { return true; } k++; }" +
-            " return false; } }); }";
-
 
     /**
      * This class filter prevents javascript from importing, using or reflecting any java classes
