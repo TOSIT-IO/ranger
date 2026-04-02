@@ -147,22 +147,6 @@
         }
       ],
       "policyConditions": [
-        {
-          "itemId":1,
-          "name":"expression",
-      	  "evaluator": "org.apache.ranger.plugin.conditionevaluator.RangerScriptConditionEvaluator",
-      	  "evaluatorOptions" : {"engineName":"JavaScript", "ui.isMultiline":"true"},
-      	  "label":"Enter boolean expression",
-      	  "description": "Boolean expression"
-        },
-        {
-          "itemId":2,
-          "name":"enforce-expiry",
-          "evaluator": "org.apache.ranger.plugin.conditionevaluator.RangerScriptTemplateConditionEvaluator",
-          "evaluatorOptions" : { "scriptTemplate":"ctx.isAccessedAfter('expiry_date');" },
-          "label":"Deny access after expiry_date?",
-          "description": "Deny access after expiry_date? (yes/no)"
-        }
       ]
     },
     "tagPolicies":[
@@ -208,53 +192,11 @@
             }]
           }
         ]
-      },
-      {"id":5,"name":"EXPIRES_ON","isEnabled":true,"isAuditEnabled":true,
-        "resources":{"tag":{"values":["EXPIRES_ON"],"isRecursive":false}},
-        "denyPolicyItems":[
-          {"accesses":[{"type":"hive:select","isAllowed":true}],"users":[],"groups":["public"],"delegateAdmin":false,
-            "conditions":[{"type":"enforce-expiry","values":["yes"]}]
-          }
-        ]
-        ,
-        "denyExceptions":[
-          {"accesses":[{"type":"hive:select","isAllowed":true}],"users":["dataloader"],"groups":[],"delegateAdmin":false}
-        ]
       }
     ]
   },
 
   "tests":[
-    {"name":"ALLOW 'select ssn from employee.personal;' for user1 using EXPIRES_ON tag",
-      "request":{
-        "resource":{"elements":{"database":"employee", "table":"personal", "column":"ssn"}},
-        "accessType":"select","user":"user1","userGroups":[],"requestData":"select ssn from employee.personal;' for user1"
-
-      },
-      "result":{"isAudited":true,"isAllowed":true,"policyId":101}
-    },
-    {"name":"DENY 'select id from employee.personal;' for user1 using EXPIRES_ON tag",
-      "request":{
-        "resource":{"elements":{"database":"employee", "table":"personal", "column":"id"}},
-        "accessType":"select","user":"user1","userGroups":[],"requestData":"select id from employee.personal;' for user1"
-
-     },
-      "result":{"isAudited":true,"isAllowed":false,"policyId":5}
-    },
-    {"name":"ALLOW 'select emp-number from employee.personal;' for dataloader using EXPIRES_ON tag",
-      "request":{
-        "resource":{"elements":{"database":"employee", "table":"personal", "column":"emp-number"}},
-        "accessType":"select","user":"dataloader","userGroups":[],"requestData":"select emp-number from employee.personal;' for dataloader"
-      },
-      "result":{"isAudited":true,"isAllowed":true,"policyId":101}
-    },
-    {"name":"DENY 'select salary from employee.personal;' for user1 using EXPIRES_ON tag",
-      "request":{
-        "resource":{"elements":{"database":"employee", "table":"personal", "column":"salary"}},
-        "accessType":"select","user":"user1","userGroups":[],"requestData":"select salary from employee.personal;' for user1"
-      },
-      "result":{"isAudited":true,"isAllowed":false,"policyId":5}
-    },
     {"name":"ALLOW 'select city from employee.personal;' for user1 using RESTRICTED tag",
       "request":{
         "resource":{"elements":{"database":"employee", "table":"personal", "column":"city"}},

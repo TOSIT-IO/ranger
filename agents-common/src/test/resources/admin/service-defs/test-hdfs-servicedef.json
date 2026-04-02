@@ -267,15 +267,6 @@
 
 	"policyConditions": 
 	[
-      {
-        "itemId":1,
-        "name":"ScriptConditionEvaluator",
-        "evaluator": "org.apache.ranger.plugin.conditionevaluator.RangerScriptConditionEvaluator",
-        "evaluatorOptions" : {"engineName":"JavaScript"},
-        "label":"Script",
-        "description": "Script to execute"
-      }
-    ,
       { "itemId": 2,
         "name":"country",
         "evaluator":"org.apache.ranger.plugin.conditionevaluator.RangerSimpleMatcher",

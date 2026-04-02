@@ -457,16 +457,6 @@
         }
       ],
       "policyConditions": [
-        {
-          "itemId": 1,
-          "name": "accessed-after-expiry",
-          "evaluator": "org.apache.ranger.plugin.conditionevaluator.RangerScriptTemplateConditionEvaluator",
-          "evaluatorOptions": {
-            "scriptTemplate": "ctx.isAccessedAfter(\u0027expiry_date\u0027);"
-          },
-          "uiHint": "{ \"singleValue\":true }",
-          "label": "Accessed after expiry_date (yes/no)?"
-        }
       ],
       "contextEnrichers": [
         {

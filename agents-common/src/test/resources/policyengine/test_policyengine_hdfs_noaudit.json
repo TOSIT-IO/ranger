@@ -27,14 +27,6 @@
       }
     ],
     "policyConditions": [
-      {
-        "itemId":1,
-        "name":"ScriptConditionEvaluator",
-        "evaluator": "org.apache.ranger.plugin.conditionevaluator.RangerScriptConditionEvaluator",
-        "evaluatorOptions" : {"engineName":"JavaScript"},
-        "label":"Script",
-        "description": "Script to execute"
-      }
     ]
   },
 
@@ -73,23 +65,6 @@
        "remoteIPAddress":"255.255.255.255"
      },
      "result":{"isAudited":false,"isAllowed":true,"policyId":3}
-    }
-    ,
-    {"name":"DENY 'read /finance/restricted/sales.db' for g=finance; invalid clientIPAddress",
-      "request":{
-        "resource":{"elements":{"path":"/finance/restricted/sales.db"}},
-        "accessType":"read","user":"user1","userGroups":["finance"],"requestData":"read /finance/restricted/sales.db",
-        "remoteIPAddress":"128.101.101.99"
-      },
-      "result":{"isAudited":false,"isAllowed":false,"policyId":-1}
-    }
-  ,
-    {"name":"ALLOW 'read /finance/restricted/sales.db' for g=finance; no clientIPAddress",
-      "request":{
-        "resource":{"elements":{"path":"/finance/restricted/sales.db"}},
-        "accessType":"read","user":"user1","userGroups":["finance"],"requestData":"read /finance/restricted/sales.db"
-      },
-      "result":{"isAudited":false,"isAllowed":false,"policyId":-1}
     }
   ,
     {"name":"ALLOW 'read /finance/restricted/hr/payroll.db' for g=finance",

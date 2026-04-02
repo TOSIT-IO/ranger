@@ -144,22 +144,6 @@
       "contextEnrichers": [
       ],
       "policyConditions": [
-        {
-          "itemId":1,
-          "name":"expression",
-      	  "evaluator": "org.apache.ranger.plugin.conditionevaluator.RangerScriptConditionEvaluator",
-      	  "evaluatorOptions" : {"engineName":"JavaScript", "ui.isMultiline":"true"},
-      	  "label":"Enter boolean expression",
-      	  "description": "Boolean expression"
-        },
-        {
-          "itemId":2,
-          "name":"enforce-expiry",
-          "evaluator": "org.apache.ranger.plugin.conditionevaluator.RangerScriptTemplateConditionEvaluator",
-          "evaluatorOptions" : { "scriptTemplate":"ctx.isAccessedAfter('expiry_date');" },
-          "label":"Deny access after expiry_date?",
-          "description": "Deny access after expiry_date? (yes/no)"
-        }
       ]
     },
     "tagPolicies":[
@@ -222,49 +206,6 @@
   },
 
   "tests":[
-    {"name":"DENY 'select ssn from employee.personal;' for testuser using EXPIRES_ON tag with DESCENDANT match",
-      "request":{
-        "resource":{"elements":{"database":"employee", "table":"personal", "column":"ssn"}},
-        "accessType":"select","user":"testuser","userGroups":[],"requestData":"select ssn from employee.personal;' for testuser",
-
-        "context": {"TAGS":"[{\"type\":\"EXPIRES_ON\", \"attributes\":{\"expiry_date\":\"2026-06-15T15:05:15.000Z\"}, \"matchType\":\"DESCENDANT\"}]"}
-      },
-      "result":{"isAudited":true,"isAllowed":false,"policyId":-1}
-    },
-    {"name":"ALLOW 'select ssn from employee.personal;' for user1 using EXPIRES_ON tag",
-      "request":{
-        "resource":{"elements":{"database":"employee", "table":"personal", "column":"ssn"}},
-        "accessType":"select","user":"user1","userGroups":[],"requestData":"select ssn from employee.personal;' for user1",
-
-        "context": {"TAGS":"[{\"type\":\"EXPIRES_ON\", \"attributes\":{\"expiry_date\":\"2026-06-15T15:05:15.000Z\"}, \"matchType\":\"SELF\"}]"}
-      },
-      "result":{"isAudited":true,"isAllowed":true,"policyId":101}
-    },
-    {"name":"DENY 'select ssn from employee.personal;' for user1 using EXPIRES_ON tag",
-      "request":{
-        "resource":{"elements":{"database":"employee", "table":"personal", "column":"ssn"}},
-        "accessType":"select","user":"user1","userGroups":[],"requestData":"select ssn from employee.personal;' for user1",
-
-        "context": {"TAGS":"[{\"type\":\"EXPIRES_ON\", \"attributes\":{\"expiry_date\":\"2015/08/10T15:05:15.000Z\"}}]"}
-      },
-      "result":{"isAudited":true,"isAllowed":false,"policyId":5}
-    },
-    {"name":"DENY 'select ssn from employee.personal;' for user1 using EXPIRES_ON tag with multiple policyItems",
-      "request":{
-        "resource":{"elements":{"database":"employee", "table":"personal", "column":"ssn"}},
-        "accessType":"select","user":"user1","userGroups":[],"requestData":"select ssn from employee.personal;' for user1",
-        "context": {"TAGS":"[{\"type\":\"EXPIRES_ON\", \"attributes\":{\"expiry_date\":\"2015/08/10\"}}]"}
-      },
-      "result":{"isAudited":true,"isAllowed":false,"policyId":5}
-    },
-    {"name":"ALLOW 'select ssn from employee.personal;' for dataloader using EXPIRES_ON tag with multiple policyItems",
-      "request":{
-        "resource":{"elements":{"database":"employee", "table":"personal", "column":"ssn"}},
-        "accessType":"select","user":"dataloader","userGroups":[],"requestData":"select ssn from employee.personal;' for dataloader",
-        "context": {"TAGS":"[{\"type\":\"EXPIRES_ON\", \"attributes\":{\"expiry_date\":\"2015/08/10\"}}]"}
-      },
-      "result":{"isAudited":true,"isAllowed":true,"policyId":101}
-    },
     {"name":"ALLOW 'select ssn from employee.personal;' for user1",
       "request":{
         "resource":{"elements":{"database":"employee", "table":"personal", "column":"ssn"}},

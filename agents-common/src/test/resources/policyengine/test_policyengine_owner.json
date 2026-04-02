@@ -14,14 +14,6 @@
     ],
     "contextEnrichers": [ ],
     "policyConditions": [
-      {
-        "itemId":1,
-        "name":"expression",
-      "evaluator": "org.apache.ranger.plugin.conditionevaluator.RangerScriptConditionEvaluator",
-      "evaluatorOptions" : {"engineName":"JavaScript", "ui.isMultiline":"true"},
-      "label":"Enter boolean expression",
-      "description": "Boolean expression"
-      }
     ]
   },
 
