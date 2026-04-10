@@ -1,6 +1,6 @@
 # TDP Ranger Notes
 
-The version 2.0.0-1.0 of Apache Ranger is based on the `ranger-2.0` branch of the Apache [repository](https://github.com/apache/ranger/tree/ranger-2.0).
+The version 2.0.0-2.0 of Apache Ranger is based on the `ranger-2.0` branch of the Apache [repository](https://github.com/apache/ranger/tree/ranger-2.0).
 
 ## Jenkinfile
 
@@ -14,28 +14,28 @@ mvn clean install -DskipTests -Drat.numUnapprovedLicenses=1000
 
 This command generates `.tar.gz` files for the Ranger Admin and all the plugins in the `target` directory:
 
-- ranger-2.0.0-1.0-admin.tar.gz
-- ranger-2.0.0-1.0-atlas-plugin.tar.gz
-- ranger-2.0.0-1.0-elasticsearch-plugin.tar.gz
-- ranger-2.0.0-1.0-hbase-plugin.tar.gz
-- ranger-2.0.0-1.0-hdfs-plugin.tar.gz
-- ranger-2.0.0-1.0-hive-plugin.tar.gz
-- ranger-2.0.0-1.0-kafka-plugin.tar.gz
-- ranger-2.0.0-1.0-kms.tar.gz
-- ranger-2.0.0-1.0-knox-plugin.tar.gz
-- ranger-2.0.0-1.0-kylin-plugin.tar.gz
-- ranger-2.0.0-1.0-migration-util.tar.gz
-- ranger-2.0.0-1.0-ozone-plugin.tar.gz
-- ranger-2.0.0-1.0-presto-plugin.tar.gz
-- ranger-2.0.0-1.0-ranger-tools.tar.gz
-- ranger-2.0.0-1.0-solr-plugin.tar.gz
-- ranger-2.0.0-1.0-solr_audit_conf.tar.gz
-- ranger-2.0.0-1.0-sqoop-plugin.tar.gz
-- ranger-2.0.0-1.0-src.tar.gz
-- ranger-2.0.0-1.0-storm-plugin.tar.gz
-- ranger-2.0.0-1.0-tagsync.tar.gz
-- ranger-2.0.0-1.0-usersync.tar.gz
-- ranger-2.0.0-1.0-yarn-plugin.tar.gz
+- ranger-2.0.0-2.0-admin.tar.gz
+- ranger-2.0.0-2.0-atlas-plugin.tar.gz
+- ranger-2.0.0-2.0-elasticsearch-plugin.tar.gz
+- ranger-2.0.0-2.0-hbase-plugin.tar.gz
+- ranger-2.0.0-2.0-hdfs-plugin.tar.gz
+- ranger-2.0.0-2.0-hive-plugin.tar.gz
+- ranger-2.0.0-2.0-kafka-plugin.tar.gz
+- ranger-2.0.0-2.0-kms.tar.gz
+- ranger-2.0.0-2.0-knox-plugin.tar.gz
+- ranger-2.0.0-2.0-kylin-plugin.tar.gz
+- ranger-2.0.0-2.0-migration-util.tar.gz
+- ranger-2.0.0-2.0-ozone-plugin.tar.gz
+- ranger-2.0.0-2.0-presto-plugin.tar.gz
+- ranger-2.0.0-2.0-ranger-tools.tar.gz
+- ranger-2.0.0-2.0-solr-plugin.tar.gz
+- ranger-2.0.0-2.0-solr_audit_conf.tar.gz
+- ranger-2.0.0-2.0-sqoop-plugin.tar.gz
+- ranger-2.0.0-2.0-src.tar.gz
+- ranger-2.0.0-2.0-storm-plugin.tar.gz
+- ranger-2.0.0-2.0-tagsync.tar.gz
+- ranger-2.0.0-2.0-usersync.tar.gz
+- ranger-2.0.0-2.0-yarn-plugin.tar.gz
 
 ## Testing parameters
 
@@ -50,7 +50,7 @@ mvn test -T 4 -DforkCount=4 -Dsurefire.rerunFailingTestsCount=3 --fail-never
 
 ## Build notes
 
-### Ranger 2.0.0-1.0 with Hadoop 3.1.1-0.0:
+### Ranger 2.0.0-1.0 with Hadoop 3.1.1-0.2:
 
 Seems OK.
 
